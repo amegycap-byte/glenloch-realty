@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { Building2, Users, TrendingUp, Home, Award, UserCheck } from "lucide-react";
 
 const stats = [
@@ -13,9 +13,10 @@ const stats = [
   { icon: UserCheck, value: 10, suffix: "K+", label: "Buyer Network" },
 ];
 
-function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
+function CountUp({ end, duration = 2000, started }: { end: number; duration?: number; started: boolean }) {
   const [count, setCount] = useState(0);
   useEffect(() => {
+    if (!started) return;
     let start = 0;
     const increment = end / (duration / 16);
     const timer = setInterval(() => {
@@ -24,13 +25,16 @@ function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
       else setCount(Math.floor(start));
     }, 16);
     return () => clearInterval(timer);
-  }, [end, duration]);
+  }, [end, duration, started]);
   return <>{count.toLocaleString()}</>;
 }
 
 export default function StatsCounter() {
+  const sectionRef = useRef(null);
+  const inView = useInView(sectionRef, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-24 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0B1A33 0%, #0F2548 50%, #1A3366 100%)" }}>
+    <section ref={sectionRef} className="py-24 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0B1A33 0%, #0F2548 50%, #1A3366 100%)" }}>
       <div className="absolute inset-0 grid-pattern opacity-[0.08]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
@@ -56,7 +60,7 @@ export default function StatsCounter() {
                 <div className="absolute inset-0 rounded-3xl bg-accent/10 blur-xl group-hover:blur-2xl transition-all duration-500" />
               </div>
               <p className="text-4xl sm:text-5xl font-extrabold text-white mb-1.5">
-                <CountUp end={stat.value} />
+                <CountUp end={stat.value} started={inView} />
                 {stat.suffix}
               </p>
               <p className="text-gray-400 text-sm font-medium tracking-wide">{stat.label}</p>

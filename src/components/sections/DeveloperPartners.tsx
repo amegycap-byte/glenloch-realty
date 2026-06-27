@@ -16,10 +16,9 @@ const partnerLogos = [
 ];
 
 const locations = [
-  { name: "Dubai", flag: "🇦🇪" },
+  { name: "UAE", flag: "🇦🇪" },
   { name: "Qatar", flag: "🇶🇦" },
   { name: "Oman", flag: "🇴🇲" },
-  { name: "UAE", flag: "🇦🇪" },
 ];
 
 export default function DeveloperPartners() {
