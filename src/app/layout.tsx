@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     "luxury property Dubai",
     "real estate advisory Dubai",
   ],
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "Glenloch Realty | Premium Dubai Real Estate Investment Advisory",
     description:

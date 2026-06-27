@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import Button from "@/components/ui/Button";
@@ -37,8 +38,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center shadow-lg shadow-accent/20 group-hover:shadow-accent/40 transition-all duration-500 group-hover:scale-105">
-              <span className="text-primary font-extrabold text-xl">G</span>
+            <div className="w-11 h-11 rounded-2xl overflow-hidden shadow-lg shadow-accent/20 group-hover:shadow-accent/40 transition-all duration-500 group-hover:scale-105">
+              <Image
+                src="/images/logo.jpg"
+                alt="Glenloch Realty"
+                width={44}
+                height={44}
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="text-white font-bold text-xl tracking-tight">
               Glenloch <span className="text-gradient font-extrabold">Realty</span>
