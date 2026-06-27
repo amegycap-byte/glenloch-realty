@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Building2, Users, Award, TrendingUp } from "lucide-react";
+import { Building2, Users, TrendingUp, Home, Award, UserCheck } from "lucide-react";
 
 const stats = [
-  { icon: Building2, value: 1200, suffix: "+", label: "Properties Sold" },
-  { icon: Users, value: 10000, suffix: "+", label: "Happy Clients" },
-  { icon: Award, value: 15, suffix: "+", label: "Industry Awards" },
-  { icon: TrendingUp, value: 7, suffix: "B+", label: "AED Transactions" },
+  { icon: Building2, value: 500, suffix: "+", label: "Properties Sold" },
+  { icon: Users, value: 1000, suffix: "+", label: "Happy Customers" },
+  { icon: TrendingUp, value: 1, suffix: "B+", label: "Sales" },
+  { icon: Home, value: 200, suffix: "+", label: "Properties Listed" },
+  { icon: Award, value: 98, suffix: "%", label: "Satisfaction" },
+  { icon: UserCheck, value: 10, suffix: "K+", label: "Buyer Network" },
 ];
 
 function CountUp({ end, duration = 2000 }: { end: number; duration?: number }) {
@@ -37,7 +39,7 @@ export default function StatsCounter() {
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-blue-500/[0.05] rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}

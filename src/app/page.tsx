@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/HeroSection";
 import FeaturedProperties from "@/components/sections/FeaturedProperties";
 import StatsCounter from "@/components/sections/StatsCounter";
+import DeveloperPartners from "@/components/sections/DeveloperPartners";
 import ListPropertySection from "@/components/sections/ListPropertySection";
 import WhyDubaiSection from "@/components/sections/WhyDubaiSection";
 import ServicesSection from "@/components/sections/ServicesSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection />
       <FeaturedProperties />
       <StatsCounter />
+      <DeveloperPartners />
       <ListPropertySection />
       <WhyDubaiSection />
       <ServicesSection />
