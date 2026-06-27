@@ -18,7 +18,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           {
             "bg-gradient-to-r from-accent to-accent-dark text-primary hover:shadow-lg hover:shadow-accent/30 active:scale-[0.97]": variant === "primary",
             "bg-primary text-white hover:bg-primary-light hover:shadow-lg active:scale-[0.97] border border-accent/20": variant === "secondary",
-            "border-2 border-accent text-accent bg-accent/10 hover:bg-accent hover:text-primary hover:shadow-lg hover:shadow-accent/30 active:scale-[0.97]": variant === "outline",
+            "border-2 border-accent text-black bg-accent/10 hover:bg-accent hover:text-primary hover:shadow-lg hover:shadow-accent/30 active:scale-[0.97]": variant === "outline",
             "text-accent hover:bg-accent/10": variant === "ghost",
           },
           {
