@@ -1,0 +1,58 @@
+import { TeamMember } from "@/lib/utils";
+
+export const team: TeamMember[] = [
+  {
+    id: "1",
+    name: "Alexander Glenloch",
+    role: "Founder & Managing Director",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    bio: "With over 20 years of experience in global real estate markets, Alexander founded Glenloch Realty with a vision to provide world-class investment advisory services. He has facilitated over AED 2 billion in property transactions across Dubai.",
+    phone: "+971 4 555 0101",
+    email: "alexander@glenlochrealty.com",
+  },
+  {
+    id: "2",
+    name: "Sarah Williams",
+    role: "Director of Investments",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+    bio: "Sarah brings 15 years of expertise in real estate investment strategy and portfolio management. She specializes in helping high-net-worth individuals build diversified property portfolios in Dubai's premium segments.",
+    phone: "+971 4 555 0102",
+    email: "sarah@glenlochrealty.com",
+  },
+  {
+    id: "3",
+    name: "Mohammed Al Rashid",
+    role: "Senior Property Consultant",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    bio: "A Dubai native with deep knowledge of the local market, Mohammed has been instrumental in guiding international investors through Dubai's real estate landscape. He specializes in off-plan investments and luxury properties.",
+    phone: "+971 4 555 0103",
+    email: "mohammed@glenlochrealty.com",
+  },
+  {
+    id: "4",
+    name: "Elena Petrova",
+    role: "Head of Client Relations",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+    bio: "Elena ensures every client receives a bespoke experience from initial consultation to post-purchase support. Fluent in 5 languages, she excels at serving our diverse international clientele with personalized attention.",
+    phone: "+971 4 555 0104",
+    email: "elena@glenlochrealty.com",
+  },
+  {
+    id: "5",
+    name: "David Chen",
+    role: "Investment Analyst",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+    bio: "David specializes in market research and investment analysis, providing clients with data-driven insights on property valuations, rental yield projections, and market trends across Dubai's key districts.",
+    phone: "+971 4 555 0105",
+    email: "david@glenlochrealty.com",
+  },
+  {
+    id: "6",
+    name: "Fatima Al Zarooni",
+    role: "Property Management Lead",
+    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&q=80",
+    bio: "With a background in hospitality and property management, Fatima oversees our after-sales and property management services, ensuring that every investment property is maintained to the highest standards.",
+    phone: "+971 4 555 0106",
+    email: "fatima@glenlochrealty.com",
+  },
+];
